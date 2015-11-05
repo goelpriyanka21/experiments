@@ -1,0 +1,13 @@
+<school name="awesomeSchool">
+	<student>
+		<name>priyanka</name>
+		>
+		<grade>12</grade>
+		<rollNo>2008127</rollNo>
+	</student>
+	<student>
+		<name>Random</name>
+		<grade>11</grade>
+		<rollNo>2009234</rollNo>
+	</student>
+</school>

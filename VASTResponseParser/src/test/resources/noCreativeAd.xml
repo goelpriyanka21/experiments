@@ -1,0 +1,14 @@
+<VAST version="2.0">
+	<Ad id="602678">
+		<InLine>
+			<AdSystem>Acudeo Compatible</AdSystem>
+			<AdTitle>NonLinear Test Campaign 1</AdTitle>
+			<Description>NonLinear Test Campaign 1</Description>
+			<Survey>http://mySurveyURL/survey</Survey>
+			<Error>http://myErrorURL/error</Error>
+			<Impression>http://myTrackingURL/impression</Impression>
+			<Creatives>
+			</Creatives>
+		</InLine>
+	</Ad>
+</VAST>

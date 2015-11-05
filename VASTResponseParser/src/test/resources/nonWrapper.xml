@@ -1,0 +1,82 @@
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.0" xsi:noNamespaceSchemaLocation="vast.xsd">
+	<Ad id="240053">
+		<InLine>
+			<AdSystem version="1.0">Yahoo Ad Manager Plus</AdSystem>
+			<AdTitle>VAST 2.0 Linear Ad</AdTitle>
+			<Description>VAST 2.0 Linear Ad</Description>
+			<Error>
+				http://pr.ybp.yahoo.com/vasterror/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+			</Error>
+			<Impression>
+				http://pr.ybp.yahoo.com/eng/1/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+			</Impression>
+			<Creatives>
+				<Creative AdID="240053">
+					<Linear>
+						<Duration>00:00:30</Duration>
+						<TrackingEvents>
+							<Tracking event="creativeView">
+								http://pr.ybp.yahoo.com/eng/2/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</Tracking>
+							<Tracking event="start">
+								http://pr.ybp.yahoo.com/eng/3/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</Tracking>
+							<Tracking event="midpoint">
+								http://pr.ybp.yahoo.com/eng/5/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</Tracking>
+							<Tracking event="firstQuartile">
+								http://pr.ybp.yahoo.com/eng/4/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								http://pr.ybp.yahoo.com/eng/6/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</Tracking>
+							<Tracking event="complete">
+								http://pr.ybp.yahoo.com/eng/7/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickThrough>
+                                <![CDATA[
+https://smgargentinawcm.solution.weborama.fr/fcgi-bin/dispatch.fcgi?a.A=cl&a.si=1412&a.te=117&a.ycp=&a.ra=[RANDOM]&g.lu=
+]]>
+							</ClickThrough>
+							<ClickTracking>
+								http://pr.ybp.yahoo.com/eng/8/imp/SU3lwPb2g7SC70qcFOFHRwhieh0_vKgFjCwSAjFtt_lBFb6A9p-0tp8UBoXffu0cOUsGO6_2IRa0YoauE3tVhNWEevCnJRUNJrvq7Gk507r9FrpRStVCv7BobKlHf4sigCtQ8Wi36IbwPTrPm8Rf3z68YAD_uU2ZSsyvvnFLGnMlpdRYcNknHzKLF1FdOu0q7bqpKRK829uEYVY6ac01eYmNCb6oVKco5CzroA4bDOOtvSbJoXfZTUQxj2KAhvtuzt3b7chySgx8Jqzlw5UBSBGHdOor7o0vJVE-xKPyNLtBLhBBB6sXVVP9tnVZvtF_kl8HVhW1bhsT6MWs5FBEIQjLBY8i6ZdwImfT1Dj6WTHtVhu7u3tiXu96IlxFp4OXewKNXDVb4eL-and0LFFen8lEUokqtaj2kngcn4mEkM7-MLT_JNLplni4fiWpueyKMvRnhz2Y4El_S-FAC0LBz3p1Q1zJLB6enU2VDcGySiWeVkDTii_i5_Py2KnKej-bNcKT-xTu3cEfZq9se6g9LNOrxBQ-MffkeqZehgQ1Q1psCxGkZgiwLCRHgsANpYQqbd3HHmWjSBchBH1NeTf5NEsf7LZ3jSXCBSi6x4lYDmi7CFjelpZDIGGA6z-1EwBypRY3SRknlXYNFbd_LWDw9gEeznlYW-P6_UoQksSVmYge2U03fwXfVOFO6GjBJlNY58oS3yJfyDfj-rZdEBHEkGz48bhGVicAvhg75Gaw3qBSnwmXIyWhK2WvxlgZ5egW6dYoV53fbOrVAo0t8GwUGYB5dKlFueAjNcAIzm70b6SVpmAGoOemYA
+							</ClickTracking>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile delivery="progressive" type="video/mp4"
+								bitrate="699" width="640" height="360" scalable="true"
+								maintainAspectRatio="true">
+                                <![CDATA[
+http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_11.mp4?a=yamplus&mr=0&c=98453
+]]>
+							</MediaFile>
+							<MediaFile delivery="progressive" type="video/mp4"
+								width="640" height="360" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[
+http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_8.mp4?a=yamplus&mr=0&c=98453
+]]>
+							</MediaFile>
+							<MediaFile delivery="progressive" type="video/mp4"
+								bitrate="299" width="640" height="360" scalable="true"
+								maintainAspectRatio="true">
+                                <![CDATA[
+http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_9.mp4?a=yamplus&mr=0&c=98453
+]]>
+							</MediaFile>
+							<MediaFile delivery="progressive" type="video/mp4"
+								bitrate="1000" width="640" height="360" scalable="true"
+								maintainAspectRatio="true">
+                                <![CDATA[
+http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_13.mp4?a=yamplus&mr=0&c=98453
+]]>
+							</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+</VAST>

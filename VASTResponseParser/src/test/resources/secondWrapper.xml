@@ -1,0 +1,26 @@
+<VAST version="2.0">
+	<Ad id="6a19d389-cbfa-4ec5-b547-fa968d93f74b">
+		<Wrapper>
+			<AdSystem>BidSwitch</AdSystem>
+			<VASTAdTagURI>
+                <![CDATA[
+http://tag.clrstm.com/vast/gjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g
+]]>
+			</VASTAdTagURI>
+			<Error>
+                <![CDATA[
+http://useast-aws2-user.bidswitch.net/vast_error/F4k8eGWiBp5X_k2-uL0mRPj8Hd1qP952k2LkhWK3lcB7_qCnwZRHM7i7zDUfs9rhGBdnEwCyz-IgHXtRwFbXcniYoouR5QllrGjcm1RuJN961b-BjbhKBy7ZB08LvbzDo2qxH1aZ7J72fAsHyCs9hHrjZ9dZeG9nH-0KbDJJUz0l1iTbz7kCAC-2e1nnS-PEvmmsvvpQf1T9cFzMydr3tBSxRDoMOZESxghM5PqTDZtyCKGVuB10K7udAPk
+]]>
+                <![CDATA[
+hVkofG6lenTyHAKC9ofQ7AeMwWJzzrhMCBjJfvObg1WfLKjYHbb3lQ4f9kTfXajFcmGbMs56lN4z9xzqu5UVRVCP_YihgzLrhFtCbR4eRWakH_ofXRqT7X7kGmQ4L4RcpecUIW0toWyU5LXZLRnll1Y2BnnoWsV52XXNqUQGdAzLWfVzE1RUrEnumKcKFgB37WShoQihFKO3_h33mRacxEf052xdBpIDSfCfSMsz9uwRlnYYiNBWjPTOqAeF7H8xvurcYXo0a6YWXPPsGafsEOHlmTEXc7tGKbsw/
+]]>
+			</Error>
+			<Impression>
+                <![CDATA[
+http://useast-aws2-user.bidswitch.net/imp/95F3D6A156408244/http%3A%2F%2Ftag.clrstm.com%2Fimp%2Fadi%2FgjS-IfSMO_eNEzZ82IaFMIJUhBJJ4qBcKWK_YuiEbK_7um0GbN3sE2KAIr5kPFxUcOUA1Vfvgo4dHNdtSqFTSQUMX0FLqYTQRUBM7GmkqaSBcdpL6Hjeu3ptLjjRjJbRFXvY5lXK_Za66PerDAHHs9Oj521lN6IRNPKnsiu7nS7Jyd-KBH5AaXcPo3GGIZ0jnKIhbKL94YsaPoqYJhu7dqvzpOEQXmcDRhTr8CbRYwP1uO3w6bEEkkrY36vG9VhJ7BgU8FLJFLOFjExzDvCSgWKEeFtLALiW4jdojhCK2x5KrQlH3OQf5dnmT1q-jQNwzd6qlpyuJy8isdNpzOWoFRZezNFYt3ynzsESQtNWKSr8qLJF3LBJ9w00fVEqZ0NQtgnj1A%2F%24%7BAUCTION_PRICE%7D%2F%24%7BCLICK_URL%3AURLENCODE%7D/F4k8eGWiBp5X_k2-uL0mRPj8Hd1qP952k2LkhWK3lcB7_qCnwZRHM7i7zDUfs9rhGBdnEwCyz-IgHXtRwFbXcniYoouR5QllrGjcm1RuJN961b-BjbhKBy7ZB08LvbzDo2qxH1aZ7J72fAsHyCs9hHrjZ9dZeG9nH-0KbDJJUz0l1iTbz7kCAC-2e1nnS-PEvmmsvvpQf1T9cFzMydr3tBSxRDoMOZESxghM5PqTDZtyCKGVuB10K7udAPkhVkofG6lenTyHAKC9ofQ7AeMwWJzzrhMCBjJfvObg1WfLKjYHbb3lQ4f9kTfXajFcmGbMs56lN4z9xzqu5UVRVCP_YihgzLrhFtCbR4eRWakH_ofXRqT7X7kGmQ4L4RcpecUIW0toWyU5LXZLRnll1Y2BnnoWsV52XXNqUQGdAzLWfVzE1RUrEnumKcKFgB37WShoQihFKO3_h33mRacxEf052xdBpIDSfCfSMsz9uwRlnYYiNBWjPTOqAeF7H8xvurcYXo0a6YWXPPsGafsEOHlmTEXc7tGKbsw/
+]]>
+			</Impression>
+			<Creatives />
+		</Wrapper>
+	</Ad>
+</VAST>
