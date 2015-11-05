@@ -10,21 +10,21 @@ import java.util.List;
  */
 
 public class VastReturnObject {
-//	/** The value returned from function */
-//	private Object valObject;
+	/** The value returned from function */
+	private Object valObject;
 	/** The return code while fetching valObject from function */
 	private VastReturnCodeEnum vastReturnCode;
 	/** All the errors and warnings while fetching valObject from function */
 	private List<VastErrorObject> vastErrorObjectList;
 
 	public VastReturnObject() {
-//		valObject = null;
+		valObject = null;
 		vastErrorObjectList = null;
 	}
 
-//	public void setValObject(Object valObj) {
-//		valObject = valObj;
-//	}
+	public void setValObject(Object valObj) {
+		valObject = valObj;
+	}
 
 	/**
 	 *
@@ -35,20 +35,17 @@ public class VastReturnObject {
 	 * @param returnCode
 	 *            The ReturnCode to be set
 	 */
-//	public void setValObjectAndCode(Object valObj, VastReturnCodeEnum returnCode) {
-//		valObject = valObj;
-//		vastReturnCode = returnCode;
-//	}
-	
-	public void setCode(VastReturnCodeEnum returnCode) {
+	public void setValObjectAndCode(Object valObj, VastReturnCodeEnum returnCode) {
+		valObject = valObj;
 		vastReturnCode = returnCode;
 	}
+	
 
-//	public Object getValObject() {
-//		return valObject;
-//	}
+	public Object getValObject() {
+		return valObject;
+	}
 
-	public void setVastErrorObject(List<VastErrorObject> errorObjectList) {
+	public void setVastErrorObjectList(List<VastErrorObject> errorObjectList) {
 		vastErrorObjectList = errorObjectList;
 	}
 
@@ -76,11 +73,11 @@ public class VastReturnObject {
 	 *            The return code to be set
 	 */
 	public void appendVastErrorObjectListAndCode(VastReturnCodeEnum returnCode, VastErrorObject vastErrorObject) {
+		vastReturnCode = returnCode;
 		if (vastErrorObjectList==null) {
 			vastErrorObjectList = new ArrayList<VastErrorObject>();
 		}
 		vastErrorObjectList.add(vastErrorObject);
-		vastReturnCode = returnCode;
 	}
 
 	/**
@@ -93,7 +90,7 @@ public class VastReturnObject {
 	 */
 	public void addWarningsToErrorList(List<VastErrorObject> warningsList) {
 		if (null == vastErrorObjectList) {
-			setVastErrorObject(new ArrayList<VastErrorObject>());
+			setVastErrorObjectList(new ArrayList<VastErrorObject>());
 		}
 		vastErrorObjectList.addAll(warningsList);
 	}

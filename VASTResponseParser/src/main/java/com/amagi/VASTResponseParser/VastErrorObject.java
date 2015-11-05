@@ -20,9 +20,9 @@ public class VastErrorObject {
 		customMessage = errorMessage;
 	}
 
-	public VastErrorObject(ErrorEnum errorEnum) {
-		error = errorEnum;
-	}
+//	public VastErrorObject(ErrorEnum errorEnum) {
+//		error = errorEnum;
+//	}
 
 	public void setErrorUrl(String url) {
 		errorUrl = url;

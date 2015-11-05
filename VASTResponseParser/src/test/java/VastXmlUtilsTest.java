@@ -68,30 +68,30 @@ public class VastXmlUtilsTest {
 		System.out.println("\nprocess ran successfully.");
 	}
 
-	@Test
-	public void testValidateVastUrl() {
-		
-		System.out.println("\ntestValidateVastUrl() ");
-		VastReturnObject vastReturnObject = new VastReturnObject();
-		String[] validConnectionProtocols = new String[] { "http", "https" };
-
-		// valid URL
-		vastReturnObject = testVastXmlUtils.validateVastUrl(
-				"https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=13374914&PluID=0&pos=7759&ord=1234&cim=1",
-				validConnectionProtocols);
-//		Assert.assertEquals(true, vastReturnObject.getValObject());
-		Assert.assertEquals(VastReturnCodeEnum.OK, vastReturnObject.getVastReturnCode());
-
-		// Invalid protocol
-		vastReturnObject = testVastXmlUtils.validateVastUrl("ftp://random.com", validConnectionProtocols);
-		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
-		Assert.assertEquals(ErrorEnum.URL_INVALID, vastReturnObject.getVastErrorObjectList().get(0).getError());
-
-		// Invalid URL
-		vastReturnObject = testVastXmlUtils.validateVastUrl("http://randomString", validConnectionProtocols);
-		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
-		Assert.assertEquals(ErrorEnum.URL_INVALID, vastReturnObject.getVastErrorObjectList().get(0).getError());
-	}
+//	@Test
+//	public void testValidateVastUrl() {
+//		
+//		System.out.println("\ntestValidateVastUrl() ");
+//		VastReturnObject vastReturnObject = new VastReturnObject();
+//		String[] validConnectionProtocols = new String[] { "http", "https" };
+//
+//		// valid URL
+//		vastReturnObject = testVastXmlUtils.validateVastUrl(
+//				"https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=is&c=23&pl=VAST&pli=13374914&PluID=0&pos=7759&ord=1234&cim=1",
+//				validConnectionProtocols);
+////		Assert.assertEquals(true, vastReturnObject.getValObject());
+//		Assert.assertEquals(VastReturnCodeEnum.OK, vastReturnObject.getVastReturnCode());
+//
+//		// Invalid protocol
+//		vastReturnObject = testVastXmlUtils.validateVastUrl("ftp://random.com", validConnectionProtocols);
+//		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
+//		Assert.assertEquals(ErrorEnum.URL_INVALID, vastReturnObject.getVastErrorObjectList().get(0).getError());
+//
+//		// Invalid URL
+//		vastReturnObject = testVastXmlUtils.validateVastUrl("http://randomString", validConnectionProtocols);
+//		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
+//		Assert.assertEquals(ErrorEnum.URL_INVALID, vastReturnObject.getVastErrorObjectList().get(0).getError());
+//	}
 
 //	@Test
 //	public void testCanConnectToUrl() {
@@ -390,23 +390,6 @@ public class VastXmlUtilsTest {
 //		}
 //	}
 //
-//	private List<VastMediaObject> buildMediaObjectList() {
-//		System.out.println("\nbuildMediaObjectList()");
-//		List<VastMediaObject> mediaObjectList = new ArrayList<VastMediaObject>();
-//		mediaObjectList.add(new VastMediaObject(
-//				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_11.mp4?a=yamplus&mr=0&c=98453",
-//				640, 360, 699));
-//		mediaObjectList.add(new VastMediaObject(
-//				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_8.mp4?a=yamplus&mr=0&c=98453",
-//				640, 360));
-//		mediaObjectList.add(new VastMediaObject(
-//				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_9.mp4?a=yamplus&mr=0&c=98453",
-//				640, 360, 299));
-//		mediaObjectList.add(new VastMediaObject(
-//				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_13.mp4?a=yamplus&mr=0&c=98453",
-//				640, 360, 1000));
-//		return mediaObjectList;
-//	}
 //
 //	@Test
 //	public void testProcessAdXml() {
@@ -522,89 +505,110 @@ public class VastXmlUtilsTest {
 //		}
 //	}
 //
-//	@Test
-//	public void testValidateVastAndFetchAssets() throws Exception {
-//		System.out.println("\ntestValidateVastAndFetchAssets()");
-//		URL mockVastUrl = PowerMock.createMock(URL.class);
-//
-//		String SECOND_WRAPPER_XML = "src/test/resources/secondWrapper.xml";
-//		String SECOND_WRAPPER_URL_STRING = "http://useast-aws2-user.bidswitch.net/vast/F4k8eGWiBp5X_k2-uL0mRPj8Hd1qP952k2LkhWK3lcB7_qCnwZRHM7i7zDUfs9rhGBdnEwCyz-IgHXtRwFbXcniYoouR5QllrGjcm1RuJN961b-BjbhKBy7ZB08LvbzDo2qxH1aZ7J72fAsHyCs9hHrjZ9dZeG9nH-0KbDJJUz0l1iTbz7kCAC-2e1nnS-PEvmmsvvpQf1T9cFzMydr3tBSxRDoMOZESxghM5PqTDZtyCKGVuB10K7udAPkhVkofG6lenTyHAKC9ofQ7AeMwWJzzrhMCBjJfvObg1WfLKjYHbb3lQ4f9kTfXajFcmGbMs56lN4z9xzqu5UVRVCP_YihgzLrhFtCbR4eRWakH_ofXRqT7X7kGmQ4L4RcpecUIW0toWyU5LXZLRnll1Y2BnnoWsV52XXNqUQGdAzLWfVzE1RUrEnumKcKFgB37WShoQihFKO3_h33mRacxEf052xdBpIDSfCfSMsz9uwRlnYYiNBWjPTOqAeF7H8xvurcYXo0a6YWXPPsGafsEOHlmTEXc7tGKbsw/http%3A%2F%2Ftag.clrstm.com%2Fvast%2FgjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g/http%3A%2F%2Ftag.clrstm.com%2Fimp%2Fadi%2FgjS-IfSMO_eNEzZ82IaFMIJUhBJJ4qBcKWK_YuiEbK_7um0GbN3sE2KAIr5kPFxUcOUA1Vfvgo4dHNdtSqFTSQUMX0FLqYTQRUBM7GmkqaSBcdpL6Hjeu3ptLjjRjJbRFXvY5lXK_Za66PerDAHHs9Oj521lN6IRNPKnsiu7nS7Jyd-KBH5AaXcPo3GGIZ0jnKIhbKL94YsaPoqYJhu7dqvzpOEQXmcDRhTr8CbRYwP1uO3w6bEEkkrY36vG9VhJ7BgU8FLJFLOFjExzDvCSgWKEeFtLALiW4jdojhCK2x5KrQlH3OQf5dnmT1q-jQNwzd6qlpyuJy8isdNpzOWoFRZezNFYt3ynzsESQtNWKSr8qLJF3LBJ9w00fVEqZ0NQtgnj1A%2F%24%7BAUCTION_PRICE%7D%2F%24%7BCLICK_URL%3AURLENCODE%7D/95F3D6A156408244";
-//		String MOCKED_SECOND_WRAPPER_URL_STRING = "/vast/F4k8eGWiBp5X_k2-uL0mRPj8Hd1qP952k2LkhWK3lcB7_qCnwZRHM7i7zDUfs9rhGBdnEwCyz-IgHXtRwFbXcniYoouR5QllrGjcm1RuJN961b-BjbhKBy7ZB08LvbzDo2qxH1aZ7J72fAsHyCs9hHrjZ9dZeG9nH-0KbDJJUz0l1iTbz7kCAC-2e1nnS-PEvmmsvvpQf1T9cFzMydr3tBSxRDoMOZESxghM5PqTDZtyCKGVuB10K7udAPkhVkofG6lenTyHAKC9ofQ7AeMwWJzzrhMCBjJfvObg1WfLKjYHbb3lQ4f9kTfXajFcmGbMs56lN4z9xzqu5UVRVCP_YihgzLrhFtCbR4eRWakH_ofXRqT7X7kGmQ4L4RcpecUIW0toWyU5LXZLRnll1Y2BnnoWsV52XXNqUQGdAzLWfVzE1RUrEnumKcKFgB37WShoQihFKO3_h33mRacxEf052xdBpIDSfCfSMsz9uwRlnYYiNBWjPTOqAeF7H8xvurcYXo0a6YWXPPsGafsEOHlmTEXc7tGKbsw/http%3A%2F%2Ftag.clrstm.com%2Fvast%2FgjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g/http%3A%2F%2Ftag.clrstm.com%2Fimp%2Fadi%2FgjS-IfSMO_eNEzZ82IaFMIJUhBJJ4qBcKWK_YuiEbK_7um0GbN3sE2KAIr5kPFxUcOUA1Vfvgo4dHNdtSqFTSQUMX0FLqYTQRUBM7GmkqaSBcdpL6Hjeu3ptLjjRjJbRFXvY5lXK_Za66PerDAHHs9Oj521lN6IRNPKnsiu7nS7Jyd-KBH5AaXcPo3GGIZ0jnKIhbKL94YsaPoqYJhu7dqvzpOEQXmcDRhTr8CbRYwP1uO3w6bEEkkrY36vG9VhJ7BgU8FLJFLOFjExzDvCSgWKEeFtLALiW4jdojhCK2x5KrQlH3OQf5dnmT1q-jQNwzd6qlpyuJy8isdNpzOWoFRZezNFYt3ynzsESQtNWKSr8qLJF3LBJ9w00fVEqZ0NQtgnj1A%2F%24%7BAUCTION_PRICE%7D%2F%24%7BCLICK_URL%3AURLENCODE%7D/95F3D6A156408244";
-//
-//		String FIRST_WRAPPER_XML = "src/test/resources/firstWrapper.xml";
-//		String FIRST_WRAPPER_URL_STRING = "http://tag.clrstm.com/vast/gjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g";
-//		String MOCKED_FIRST_WRAPPER_URL_STRING = "/vast/gjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g";
-//
-//		String AD_XML = "src/test/resources/nonWrapper.xml";
-//		String AD_URL_STRING = "http://pr.ybp.yahoo.com/ab/secure/false/imp/VLKWKpF-yqYuIxXBgBOcVU-tfralEMxJvgIW8yC_y4fcbC58RypCSCtbray5i9H7NACSD2TwfaPlsWpQtEeNwvQ2PnIQJwFaW2drsKpoHI-YtuXbvSrhJC4LBVOCGBwwaDpTRFa3VwDCWBPOf3X-CGYmSq-SjAhuYHfB1NQx6-Qxhz_zVIWeE1IhoGdnq-fyhlhWpYjEvuPBS33r3YHdVWLNRMHkRAbprj-h5XxuFfm0JgI2RNaj9Hg_dASrxpgK0_grE1fZPfAGKjlTvGSLFbKCKaxLdY7jUeLDjmSvvpwi9-PdBI5DHAGqedOGjoxIyss8zthEVWZXqiQmnIih1eXVDumiPCwdJ85JzgLCGcBYFWScxbSuYLNNX7fmBwQklV8Md91B5x2_UBTBf056MZqSDwROqQQtxFUmZuJumhdhHfnaWl_vQGNirT2imlb7Mbsj_PyD4lTY7gNX8p8I_aQDEoOtx9vYE9OHXdhImjdxnWKUrjO2ciAucRWc43i-FkV0afSGyncS5WvH_l82uw1eoThaCUwJjSiHI6cAwnaeXmQG277ttrcrIur7FhqUSvgyhng1UEge0MWNuxJ3wpwUCKzsA87pYifghlF94Xku5JNDZIFXVbFIkp9TzPnlw-_Wj5RLqV2MnsQuBvJXIT-JzXxDHJklRky-l0upS05z5vbQ6iLz90hJtFV7LyzwJYy3qTAXtYeuX5ZuScqET2zpDpvR3zfS/wp/DA7AFFCA6F021CAB";
-//		String MOCKED_AD_URL_STRING = "/ab/secure/false/imp/VLKWKpF-yqYuIxXBgBOcVU-tfralEMxJvgIW8yC_y4fcbC58RypCSCtbray5i9H7NACSD2TwfaPlsWpQtEeNwvQ2PnIQJwFaW2drsKpoHI-YtuXbvSrhJC4LBVOCGBwwaDpTRFa3VwDCWBPOf3X-CGYmSq-SjAhuYHfB1NQx6-Qxhz_zVIWeE1IhoGdnq-fyhlhWpYjEvuPBS33r3YHdVWLNRMHkRAbprj-h5XxuFfm0JgI2RNaj9Hg_dASrxpgK0_grE1fZPfAGKjlTvGSLFbKCKaxLdY7jUeLDjmSvvpwi9-PdBI5DHAGqedOGjoxIyss8zthEVWZXqiQmnIih1eXVDumiPCwdJ85JzgLCGcBYFWScxbSuYLNNX7fmBwQklV8Md91B5x2_UBTBf056MZqSDwROqQQtxFUmZuJumhdhHfnaWl_vQGNirT2imlb7Mbsj_PyD4lTY7gNX8p8I_aQDEoOtx9vYE9OHXdhImjdxnWKUrjO2ciAucRWc43i-FkV0afSGyncS5WvH_l82uw1eoThaCUwJjSiHI6cAwnaeXmQG277ttrcrIur7FhqUSvgyhng1UEge0MWNuxJ3wpwUCKzsA87pYifghlF94Xku5JNDZIFXVbFIkp9TzPnlw-_Wj5RLqV2MnsQuBvJXIT-JzXxDHJklRky-l0upS05z5vbQ6iLz90hJtFV7LyzwJYy3qTAXtYeuX5ZuScqET2zpDpvR3zfS/wp/DA7AFFCA6F021CAB";
-//		String DOWN_URL_STRING = "http://google.com/urlIsDown";
-//		String MOCKED_DOWN_URL_STRING = "/urlIsDown";
-//		String INVALID_XML = "src/test/resources/invalid.xml";
-//		String INVALID_XML_STRING = "http://google.com/invalidXml";
-//		String MOCKED_INVALID_XML_STRING = "/invalidXml";
-//		String FTP_URL_STRING = "ftp://random.com";
-//
-//		server.request(by(uri(MOCKED_SECOND_WRAPPER_URL_STRING))).response(file(SECOND_WRAPPER_XML));
-//		server.request(by(uri(MOCKED_FIRST_WRAPPER_URL_STRING))).response(file(FIRST_WRAPPER_XML));
-//		server.request(by(uri(MOCKED_AD_URL_STRING))).response(header("Access-Control-Allow-Origin", "*"),
-//				attachment("awesome.xml", file(AD_XML)));
-//		server.request(by(uri(MOCKED_DOWN_URL_STRING))).response(status(400));
-//		server.request(by(uri(MOCKED_INVALID_XML_STRING))).response(file(INVALID_XML));
-//		runner = runner(server);
-//		runner.start();
-//		String serverUrl = "http://localhost:" + server.port();
-//		String serverFtpUrl = "ftp://localhost:" + server.port();
-//		URL MOCKED_SECOND_WRAPPER_URL = new URL(serverUrl + MOCKED_SECOND_WRAPPER_URL_STRING);
-//		URL MOCKED_FIRST_WRAPPER_URL = new URL(serverUrl + MOCKED_FIRST_WRAPPER_URL_STRING);
-//		URL MOCKED_AD_URL = new URL(serverUrl + MOCKED_AD_URL_STRING);
-//		URL MOCKED_DOWN_URL = new URL(serverUrl + MOCKED_DOWN_URL_STRING);
-//		URL MOCKED_INVALID_XML = new URL(serverUrl + MOCKED_INVALID_XML_STRING);
-//		URL MOCKED_FTP_URL = new URL(serverFtpUrl + MOCKED_AD_URL_STRING);
-//		PowerMock.expectNew(URL.class, SECOND_WRAPPER_URL_STRING).andReturn(MOCKED_SECOND_WRAPPER_URL);
-//		PowerMock.expectNew(URL.class, FIRST_WRAPPER_URL_STRING).andReturn(MOCKED_FIRST_WRAPPER_URL).anyTimes();
-//		PowerMock.expectNew(URL.class, AD_URL_STRING).andReturn(MOCKED_AD_URL).anyTimes();
-//		PowerMock.expectNew(URL.class, DOWN_URL_STRING).andReturn(MOCKED_DOWN_URL);
-//		PowerMock.expectNew(URL.class, INVALID_XML_STRING).andReturn(MOCKED_INVALID_XML);
-//		PowerMock.expectNew(URL.class, FTP_URL_STRING).andReturn(MOCKED_FTP_URL);
-//		PowerMock.replayAll();
-//		List<VastMediaObject> expectedMediaObjectList = buildMediaObjectList();
-//		List<VastMediaObject> mediaObjectList;
-//
-//		// No. of Wrapper XML = WRAPPER_XML_MAX_LIMIT
-//		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(FIRST_WRAPPER_URL_STRING);
-//		Assert.assertEquals(VastReturnCodeEnum.WARNING, vastReturnObject.getVastReturnCode());
-//		mediaObjectList = (List<VastMediaObject>) vastReturnObject.getValObject();
-//		Assert.assertArrayEquals(expectedMediaObjectList.toArray(), mediaObjectList.toArray());
-//
-//		// No. of Wrapper XML > WRAPPER_XML_MAX_LIMIT
-//		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(SECOND_WRAPPER_URL_STRING);
-//		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
-//		Assert.assertEquals(ErrorEnum.WRAPPER_MAX_LIMIT_EXCEEDED,
-//				vastReturnObject.getVastErrorObjectList().get(0).getError());
-//
-//		// No. of Wrapper XML < WRAPPER_XML_MAX_LIMIT
-//		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(AD_URL_STRING);
-//		Assert.assertEquals(VastReturnCodeEnum.OK, vastReturnObject.getVastReturnCode());
-//		mediaObjectList = (List<VastMediaObject>) vastReturnObject.getValObject();
-//		Assert.assertArrayEquals(expectedMediaObjectList.toArray(), mediaObjectList.toArray());
-//
-//		// Invalid protocol
-//		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets("ftp://random.com");
-//		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
-//		Assert.assertEquals(ErrorEnum.URL_INVALID_PROTOCOL,
-//				vastReturnObject.getVastErrorObjectList().get(0).getError());
-//
-//		// Cannot connect to URL
-//		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(DOWN_URL_STRING);
-//		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
-//		Assert.assertEquals(ErrorEnum.URL_CANT_CONNECT, vastReturnObject.getVastErrorObjectList().get(0).getError());
-//
-//		// Invalid XML
-//		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(INVALID_XML_STRING);
-//		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
-//		Assert.assertEquals(ErrorEnum.XML_PARSING_EXCEPTION,
-//				vastReturnObject.getVastErrorObjectList().get(0).getError());
-//	}
+	private List<VastMediaObject> buildMediaObjectList() {
+		System.out.println("\nbuildMediaObjectList()");
+		List<VastMediaObject> mediaObjectList = new ArrayList<VastMediaObject>();
+		mediaObjectList.add(new VastMediaObject(
+				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_11.mp4?a=yamplus&mr=0&c=98453",
+				640, 360, 699));
+		mediaObjectList.add(new VastMediaObject(
+				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_8.mp4?a=yamplus&mr=0&c=98453",
+				640, 360));
+		mediaObjectList.add(new VastMediaObject(
+				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_9.mp4?a=yamplus&mr=0&c=98453",
+				640, 360, 299));
+		mediaObjectList.add(new VastMediaObject(
+				"http://http.atlas.cdn.yimg.com/yamplus/video_q56ZjD12WJemSb7m7YY7yTvDk-VR4Gse2n-gLwvBUUa4bFAc08PpIsTcFOvpfUH_DcpgrasaGHU-_13.mp4?a=yamplus&mr=0&c=98453",
+				640, 360, 1000));
+		return mediaObjectList;
+	}
+	
+	@Test
+	public void testValidateVastAndFetchAssets() throws Exception {
+		System.out.println("\ntestValidateVastAndFetchAssets()");
+		URL mockVastUrl = PowerMock.createMock(URL.class);
+
+		String SECOND_WRAPPER_XML = "src/test/resources/secondWrapper.xml";
+		String SECOND_WRAPPER_URL_STRING = "http://useast-aws2-user.bidswitch.net/vast/F4k8eGWiBp5X_k2-uL0mRPj8Hd1qP952k2LkhWK3lcB7_qCnwZRHM7i7zDUfs9rhGBdnEwCyz-IgHXtRwFbXcniYoouR5QllrGjcm1RuJN961b-BjbhKBy7ZB08LvbzDo2qxH1aZ7J72fAsHyCs9hHrjZ9dZeG9nH-0KbDJJUz0l1iTbz7kCAC-2e1nnS-PEvmmsvvpQf1T9cFzMydr3tBSxRDoMOZESxghM5PqTDZtyCKGVuB10K7udAPkhVkofG6lenTyHAKC9ofQ7AeMwWJzzrhMCBjJfvObg1WfLKjYHbb3lQ4f9kTfXajFcmGbMs56lN4z9xzqu5UVRVCP_YihgzLrhFtCbR4eRWakH_ofXRqT7X7kGmQ4L4RcpecUIW0toWyU5LXZLRnll1Y2BnnoWsV52XXNqUQGdAzLWfVzE1RUrEnumKcKFgB37WShoQihFKO3_h33mRacxEf052xdBpIDSfCfSMsz9uwRlnYYiNBWjPTOqAeF7H8xvurcYXo0a6YWXPPsGafsEOHlmTEXc7tGKbsw/http%3A%2F%2Ftag.clrstm.com%2Fvast%2FgjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g/http%3A%2F%2Ftag.clrstm.com%2Fimp%2Fadi%2FgjS-IfSMO_eNEzZ82IaFMIJUhBJJ4qBcKWK_YuiEbK_7um0GbN3sE2KAIr5kPFxUcOUA1Vfvgo4dHNdtSqFTSQUMX0FLqYTQRUBM7GmkqaSBcdpL6Hjeu3ptLjjRjJbRFXvY5lXK_Za66PerDAHHs9Oj521lN6IRNPKnsiu7nS7Jyd-KBH5AaXcPo3GGIZ0jnKIhbKL94YsaPoqYJhu7dqvzpOEQXmcDRhTr8CbRYwP1uO3w6bEEkkrY36vG9VhJ7BgU8FLJFLOFjExzDvCSgWKEeFtLALiW4jdojhCK2x5KrQlH3OQf5dnmT1q-jQNwzd6qlpyuJy8isdNpzOWoFRZezNFYt3ynzsESQtNWKSr8qLJF3LBJ9w00fVEqZ0NQtgnj1A%2F%24%7BAUCTION_PRICE%7D%2F%24%7BCLICK_URL%3AURLENCODE%7D/95F3D6A156408244";
+		String MOCKED_SECOND_WRAPPER_URL_STRING = "/vast/F4k8eGWiBp5X_k2-uL0mRPj8Hd1qP952k2LkhWK3lcB7_qCnwZRHM7i7zDUfs9rhGBdnEwCyz-IgHXtRwFbXcniYoouR5QllrGjcm1RuJN961b-BjbhKBy7ZB08LvbzDo2qxH1aZ7J72fAsHyCs9hHrjZ9dZeG9nH-0KbDJJUz0l1iTbz7kCAC-2e1nnS-PEvmmsvvpQf1T9cFzMydr3tBSxRDoMOZESxghM5PqTDZtyCKGVuB10K7udAPkhVkofG6lenTyHAKC9ofQ7AeMwWJzzrhMCBjJfvObg1WfLKjYHbb3lQ4f9kTfXajFcmGbMs56lN4z9xzqu5UVRVCP_YihgzLrhFtCbR4eRWakH_ofXRqT7X7kGmQ4L4RcpecUIW0toWyU5LXZLRnll1Y2BnnoWsV52XXNqUQGdAzLWfVzE1RUrEnumKcKFgB37WShoQihFKO3_h33mRacxEf052xdBpIDSfCfSMsz9uwRlnYYiNBWjPTOqAeF7H8xvurcYXo0a6YWXPPsGafsEOHlmTEXc7tGKbsw/http%3A%2F%2Ftag.clrstm.com%2Fvast%2FgjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g/http%3A%2F%2Ftag.clrstm.com%2Fimp%2Fadi%2FgjS-IfSMO_eNEzZ82IaFMIJUhBJJ4qBcKWK_YuiEbK_7um0GbN3sE2KAIr5kPFxUcOUA1Vfvgo4dHNdtSqFTSQUMX0FLqYTQRUBM7GmkqaSBcdpL6Hjeu3ptLjjRjJbRFXvY5lXK_Za66PerDAHHs9Oj521lN6IRNPKnsiu7nS7Jyd-KBH5AaXcPo3GGIZ0jnKIhbKL94YsaPoqYJhu7dqvzpOEQXmcDRhTr8CbRYwP1uO3w6bEEkkrY36vG9VhJ7BgU8FLJFLOFjExzDvCSgWKEeFtLALiW4jdojhCK2x5KrQlH3OQf5dnmT1q-jQNwzd6qlpyuJy8isdNpzOWoFRZezNFYt3ynzsESQtNWKSr8qLJF3LBJ9w00fVEqZ0NQtgnj1A%2F%24%7BAUCTION_PRICE%7D%2F%24%7BCLICK_URL%3AURLENCODE%7D/95F3D6A156408244";
+
+		String FIRST_WRAPPER_XML = "src/test/resources/firstWrapper.xml";
+		String FIRST_WRAPPER_URL_STRING = "http://tag.clrstm.com/vast/gjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g";
+		String MOCKED_FIRST_WRAPPER_URL_STRING = "/vast/gjS-IaL0qHz2vt3p9pddeQH4_Sknto5N6dzeU0JvexiQODxJD2qqBLoFHGPw89oZHvE-2_rFCWCvteujN2hs-EmS1AXN08OAFI-H6a1-4gSmAE0yczSZoTg54mA2vrrOf4hOB5rIMhwdyw0xgD9pw2A4pUjvy-TWjy0bTqkoRnd8w8d21lJdKzL9pb6C0Q1wkr5iJTV0X6Lrrj6vK0uKThLIe-Nsv2LsJZQ32nYyZmCBjFDTNiwgkHHknXm8_HLhiIpCgVXSoMDHvUkwXQYYoXWNaH4NDi_OyQRuMLWgWKvYwmaCvisttqrpf4V6qLfLFLE56iUjUDop2I0AAKCivpGGeFXnadjG9punW4WDqyUC1dcWxS0Tr-PEAwklBE_iphZQ3g";
+
+		String AD_XML = "src/test/resources/nonWrapper.xml";
+		String AD_URL_STRING = "http://pr.ybp.yahoo.com/ab/secure/false/imp/VLKWKpF-yqYuIxXBgBOcVU-tfralEMxJvgIW8yC_y4fcbC58RypCSCtbray5i9H7NACSD2TwfaPlsWpQtEeNwvQ2PnIQJwFaW2drsKpoHI-YtuXbvSrhJC4LBVOCGBwwaDpTRFa3VwDCWBPOf3X-CGYmSq-SjAhuYHfB1NQx6-Qxhz_zVIWeE1IhoGdnq-fyhlhWpYjEvuPBS33r3YHdVWLNRMHkRAbprj-h5XxuFfm0JgI2RNaj9Hg_dASrxpgK0_grE1fZPfAGKjlTvGSLFbKCKaxLdY7jUeLDjmSvvpwi9-PdBI5DHAGqedOGjoxIyss8zthEVWZXqiQmnIih1eXVDumiPCwdJ85JzgLCGcBYFWScxbSuYLNNX7fmBwQklV8Md91B5x2_UBTBf056MZqSDwROqQQtxFUmZuJumhdhHfnaWl_vQGNirT2imlb7Mbsj_PyD4lTY7gNX8p8I_aQDEoOtx9vYE9OHXdhImjdxnWKUrjO2ciAucRWc43i-FkV0afSGyncS5WvH_l82uw1eoThaCUwJjSiHI6cAwnaeXmQG277ttrcrIur7FhqUSvgyhng1UEge0MWNuxJ3wpwUCKzsA87pYifghlF94Xku5JNDZIFXVbFIkp9TzPnlw-_Wj5RLqV2MnsQuBvJXIT-JzXxDHJklRky-l0upS05z5vbQ6iLz90hJtFV7LyzwJYy3qTAXtYeuX5ZuScqET2zpDpvR3zfS/wp/DA7AFFCA6F021CAB";
+		String MOCKED_AD_URL_STRING = "/ab/secure/false/imp/VLKWKpF-yqYuIxXBgBOcVU-tfralEMxJvgIW8yC_y4fcbC58RypCSCtbray5i9H7NACSD2TwfaPlsWpQtEeNwvQ2PnIQJwFaW2drsKpoHI-YtuXbvSrhJC4LBVOCGBwwaDpTRFa3VwDCWBPOf3X-CGYmSq-SjAhuYHfB1NQx6-Qxhz_zVIWeE1IhoGdnq-fyhlhWpYjEvuPBS33r3YHdVWLNRMHkRAbprj-h5XxuFfm0JgI2RNaj9Hg_dASrxpgK0_grE1fZPfAGKjlTvGSLFbKCKaxLdY7jUeLDjmSvvpwi9-PdBI5DHAGqedOGjoxIyss8zthEVWZXqiQmnIih1eXVDumiPCwdJ85JzgLCGcBYFWScxbSuYLNNX7fmBwQklV8Md91B5x2_UBTBf056MZqSDwROqQQtxFUmZuJumhdhHfnaWl_vQGNirT2imlb7Mbsj_PyD4lTY7gNX8p8I_aQDEoOtx9vYE9OHXdhImjdxnWKUrjO2ciAucRWc43i-FkV0afSGyncS5WvH_l82uw1eoThaCUwJjSiHI6cAwnaeXmQG277ttrcrIur7FhqUSvgyhng1UEge0MWNuxJ3wpwUCKzsA87pYifghlF94Xku5JNDZIFXVbFIkp9TzPnlw-_Wj5RLqV2MnsQuBvJXIT-JzXxDHJklRky-l0upS05z5vbQ6iLz90hJtFV7LyzwJYy3qTAXtYeuX5ZuScqET2zpDpvR3zfS/wp/DA7AFFCA6F021CAB";
+		
+		String DOWN_URL_STRING = "http://google.com/urlIsDown";
+		String MOCKED_DOWN_URL_STRING = "/urlIsDown";
+		
+		String INVALID_XML = "src/test/resources/invalid.xml";
+		String INVALID_XML_STRING = "http://google.com/invalidXml";
+		String MOCKED_INVALID_XML_STRING = "/invalidXml";
+		
+		String FTP_URL_STRING = "ftp://random.com";
+
+		server.request(by(uri(MOCKED_SECOND_WRAPPER_URL_STRING))).response(file(SECOND_WRAPPER_XML));
+		server.request(by(uri(MOCKED_FIRST_WRAPPER_URL_STRING))).response(file(FIRST_WRAPPER_XML));
+		server.request(by(uri(MOCKED_AD_URL_STRING))).response(header("Access-Control-Allow-Origin", "*"),
+				attachment("awesome.xml", file(AD_XML)));
+		server.request(by(uri(MOCKED_DOWN_URL_STRING))).response(status(400));
+		server.request(by(uri(MOCKED_INVALID_XML_STRING))).response(file(INVALID_XML));
+		runner = runner(server);
+		runner.start();
+		String serverUrl = "http://localhost:" + server.port();
+		String serverFtpUrl = "ftp://localhost:" + server.port();
+		URL MOCKED_SECOND_WRAPPER_URL = new URL(serverUrl + MOCKED_SECOND_WRAPPER_URL_STRING);
+		URL MOCKED_FIRST_WRAPPER_URL = new URL(serverUrl + MOCKED_FIRST_WRAPPER_URL_STRING);
+		URL MOCKED_AD_URL = new URL(serverUrl + MOCKED_AD_URL_STRING);
+		URL MOCKED_DOWN_URL = new URL(serverUrl + MOCKED_DOWN_URL_STRING);
+		URL MOCKED_INVALID_XML = new URL(serverUrl + MOCKED_INVALID_XML_STRING);
+		URL MOCKED_FTP_URL = new URL(serverFtpUrl + MOCKED_AD_URL_STRING);
+		PowerMock.expectNew(URL.class, SECOND_WRAPPER_URL_STRING).andReturn(MOCKED_SECOND_WRAPPER_URL);
+		PowerMock.expectNew(URL.class, FIRST_WRAPPER_URL_STRING).andReturn(MOCKED_FIRST_WRAPPER_URL).anyTimes();
+		PowerMock.expectNew(URL.class, AD_URL_STRING).andReturn(MOCKED_AD_URL).anyTimes();
+		PowerMock.expectNew(URL.class, DOWN_URL_STRING).andReturn(MOCKED_DOWN_URL);
+		PowerMock.expectNew(URL.class, INVALID_XML_STRING).andReturn(MOCKED_INVALID_XML);
+		PowerMock.expectNew(URL.class, FTP_URL_STRING).andReturn(MOCKED_FTP_URL);
+		PowerMock.replayAll();
+		List<VastMediaObject> expectedMediaObjectList = buildMediaObjectList();
+		List<VastMediaObject> mediaObjectList;
+
+		// No. of Wrapper XML = WRAPPER_XML_MAX_LIMIT
+		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(FIRST_WRAPPER_URL_STRING);
+		Assert.assertEquals(VastReturnCodeEnum.WARNING, vastReturnObject.getVastReturnCode());
+		mediaObjectList = (List<VastMediaObject>) vastReturnObject.getValObject();
+		Assert.assertArrayEquals(expectedMediaObjectList.toArray(), mediaObjectList.toArray());
+
+		// No. of Wrapper XML > WRAPPER_XML_MAX_LIMIT
+		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(SECOND_WRAPPER_URL_STRING);
+		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
+		Assert.assertEquals(ErrorEnum.WRAPPER_MAX_LIMIT_EXCEEDED,
+				vastReturnObject.getVastErrorObjectList().get(0).getError());
+
+		// No. of Wrapper XML < WRAPPER_XML_MAX_LIMIT
+		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(AD_URL_STRING);
+		Assert.assertEquals(VastReturnCodeEnum.OK, vastReturnObject.getVastReturnCode());
+		mediaObjectList = (List<VastMediaObject>) vastReturnObject.getValObject();
+		Assert.assertArrayEquals(expectedMediaObjectList.toArray(), mediaObjectList.toArray());
+
+		// Invalid protocol
+		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets("ftp://random.com");
+		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
+		Assert.assertEquals(ErrorEnum.URL_INVALID_PROTOCOL,
+				vastReturnObject.getVastErrorObjectList().get(0).getError());
+
+		// Cannot connect to URL
+		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(DOWN_URL_STRING);
+		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
+		Assert.assertEquals(ErrorEnum.URL_CANT_CONNECT, vastReturnObject.getVastErrorObjectList().get(0).getError());
+
+		// Invalid XML
+		vastReturnObject = testVastXmlUtils.validateVastAndFetchAssets(INVALID_XML_STRING);
+		Assert.assertEquals(VastReturnCodeEnum.ERROR, vastReturnObject.getVastReturnCode());
+		Assert.assertEquals(ErrorEnum.XML_PARSING_EXCEPTION,
+				vastReturnObject.getVastErrorObjectList().get(0).getError());
+	}
 
 }
